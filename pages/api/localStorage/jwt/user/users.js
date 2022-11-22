@@ -1,6 +1,7 @@
-import initDatabase from "../../database/dbConnect";
-import User from "../../database/model/User";
-import authenticated from "../../utils/middleware/authenticated";
+import initDatabase from "../../../../../database/dbConnect";
+import User from "../../../../../database/model/User";
+import authenticated from "../../../../../utils/middleware/localStorage/jwt/authenticated";
+
 
 async function handler(req, res) {
     initDatabase()

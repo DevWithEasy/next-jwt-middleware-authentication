@@ -1,7 +1,8 @@
 import bcrypt from "bcrypt";
 import jwt from "jsonwebtoken";
-import initDatabase from "../../../database/dbConnect";
-import User from "../../../database/model/User";
+import initDatabase from "../../../../../database/dbConnect";
+import User from "../../../../../database/model/User";
+
 export default async function handler(req, res) {
   initDatabase()
   try {

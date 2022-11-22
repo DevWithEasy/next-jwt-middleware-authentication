@@ -1,6 +1,7 @@
-import User from "../../../database/model/User"
 import bcrypt from "bcrypt"
-import initDatabase from "../../../database/dbConnect"
+import initDatabase from "../../../../../database/dbConnect"
+import User from "../../../../../database/model/User"
+
 
 export default async function handler(req, res) {
   initDatabase()

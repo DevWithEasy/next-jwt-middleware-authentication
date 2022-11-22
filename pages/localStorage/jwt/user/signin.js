@@ -10,14 +10,14 @@ export default function Signin(){
     async function signin(e){
         e.preventDefault()
         try {
-            const res = await axios.post('/api/user/signin',data)
+            const res = await axios.post('/api/localStorage/jwt/user/signin',data)
             if(res.data){
                 console.log(res.data)
                 localStorage.setItem('acceess_token',res.data.token)
-                router.push(`/dashboard/`)
+                router.push(`/localStorage/jwt/user/dashboard/`)
             }
         } catch (error) {
-            console.log(error.message)
+            console.log(error)
         }
     }
     return (
